@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    text-align: center;
+    height: 100vh;
+    background-color: #8ed1fc;
+}
+.main h1{
+    padding-top: 200px;
+    padding-bottom: 50px;
+
+}
+
+.box{
+    width: 400px;
+    height: 30px;
+    margin: 10px 0;
+    border: 2px solid rgb(65,88,208);
+    border-radius: 5px;
+}

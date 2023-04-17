@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    text-align: center;
+    height: 100vh;
+    background-color: #8ed1fc;
+}
+.main h1{
+    padding-top: 200px;
+    padding-bottom: 50px;
+
+}
+.main a button{
+    padding: 8px 20px;
+    margin: 0px 5px;
+    background-color: #0693e3;
+    border-radius: 5px;
+    border: 1px solid rgb(65,88,208);
+    cursor: pointer;
+    color: black;
+    
+}
+.main a{
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.main a:hover{
+    text-decoration: underline;
+}
+.main a button:hover{
+    background-color: rgb(65,88,208);
+    color: White;
+}
