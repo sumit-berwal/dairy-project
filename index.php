@@ -12,7 +12,9 @@
     <?php
         $date = date("Y-m-d");
         echo "<h2>We Are Working From 2023-04-17 to $date";
+        
         ?>
+        
 
 <h1>Our Dairy Your Milk</h1>
 <a href="authentication/register.php"><button>Register</button></a>
