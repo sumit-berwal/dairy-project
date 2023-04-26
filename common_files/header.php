@@ -17,17 +17,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="./modules/person_crud/create_person.php">Add Person</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Gallery</a>
+          <a class="nav-link" href="#">Add Milk Quantity</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./authentication/logout.php">Logout</a>
+          <a class="nav-link" href="#">Search Person Data</a>
         </li>
+
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -47,7 +48,7 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> -->
-      
+      <a href="./authentication/logout.php"><button class="btn btn-outline-success" type="text">Log Out</button></a>
     </div>
   </div>
 </nav>
