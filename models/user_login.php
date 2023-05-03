@@ -40,7 +40,7 @@ if(isset($_POST)){
             $row = mysqli_fetch_assoc($result);
             echo"<pre>";
             // print_r($row); exit;
-            $message .= "You are successfully logged in";
+            $message .= "Congratulation! You are successfully logged in";
             unset($row['pass']);
             $_SESSION['users'] = $row;
         }else{
@@ -63,7 +63,7 @@ if(isset($_POST)){
         $_SESSION['hasError']= $hasError;
         header('location: ../authentication/login.php');
     }else{
-        header('location: ../deshboard.php');
+        header('location: ../dashboard.php');
     }
 
     

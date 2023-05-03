@@ -3,8 +3,9 @@ session_start();
 if(!empty($_SESSION['message'])){
     echo $_SESSION['message'];
     unset($_SESSION['message']);
-    print_r($_SESSION['users']);
+    // print_r($_SESSION['users']);
 }
+// echo getcwd();
 ?>
 
 <!DOCTYPE html>

@@ -9,7 +9,7 @@ if(!empty($_SESSION['message'])){ ?>
 <?php
 }
 
-echo $_SESSION['users']['id'];
+// echo $_SESSION['users']['id'];
 
 
 
