@@ -24,10 +24,10 @@
           <a class="nav-link" href="http://localhost:10014/project/modules-person-crud/create_person.php">Add Person</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:10014/project/modules-person-crud/list_person.php">List Person</a>
+          <a class="nav-link" href="http://localhost:10014/project/modules-person-crud/list_person.php">Person List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Add Milk Quantity</a>
+          <a class="nav-link" href="http://localhost:10014/project/modules-dairy-crud/milk_quantity.php">Add Milk Quantity</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Search Person Data</a>
