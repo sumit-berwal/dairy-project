@@ -1,18 +1,32 @@
 <?php
 require '../authentication/user_authentication.php';
 require '../connection.php';
-include_once '../common_files/header.php'; ?>
-
+include_once '../common_files/header.php';
+$row = $_SESSION['pList'];
+// print_r($row);
+// echo $_SESSION['users']['id'];
+?>
 <div class="main">
+   <?php if(!empty($_SESSION['message'])){
+    echo $_SESSION['message'];
+    unset($_SESSION['message']);
+   } 
+   
+   ?>
     
-        <div class="content">
-            <h1>Add Milk Quentity</h1>
+        <div class="content milk_quantity">
+            <h1>Add Milk Quantity</h1>
             <p>Fill this form carefully</p>
-            <form action="" method="post">
-                <input class="box" type="text" name="fname" value="" placeholder="Chose person" ></br>
-                <input class="box" type="text" name="lname" value="" placeholder="Your last name" ></br>
-                <input class="box" type="email" name="email" value="" placeholder="Your email id" ></br>
-                <input class="box" type="number" name="mobile" value="" placeholder="Your mobile number" ></br>
+            <form action="./milk_crud.php" method="post">
+                <select name="personId" id="personList" >
+                    <option value="" desabled selected hidden >Chose the name of customer..</option>
+                    <?php foreach($row as $key=>$value){  ?>
+                    <option value="<?php echo $value['id']; ?>"><?php echo $value['firstname'];  ?></option>
+                <?php } ?>
+                </select><br>
+                <input class="box" type="number" name="morningQty" value="" placeholder="Morning quantity in Kg.." ></br>
+                <input class="box" type="number" name="eveningQty" value="" placeholder="Evening quantity in Kg.." ></br>
+                <input class="box" type="date" name="date" value="<?php echo date('Y-m-d'); ?>" ></br>
                 <input class="box" type="submit" value="Submit" name="submit">
 
             </form>

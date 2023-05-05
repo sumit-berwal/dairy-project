@@ -20,7 +20,8 @@ include_once '../common_files/header.php';
     $query .= $new ;
     $sql = mysqli_query($con, $query);
     $row = mysqli_fetch_all($sql, MYSQLI_ASSOC);
-    // print_r($row);
+     $_SESSION['pList'] = $row;
+    //  print_r($_SESSION['pList']);
 
 ?>
 
@@ -32,6 +33,7 @@ include_once '../common_files/header.php';
         <div class="content">
             <h1>All Customers</h1>
             <p>You find your all customers list here</P>
+            
     <?php
             if(!empty($row)){ ?>
      <table id="customers">
@@ -58,7 +60,8 @@ include_once '../common_files/header.php';
                 <td> <a href="./delete_person.php?Id=<?php echo $value['id']; ?>">Delete</a> </td> 
             </tr>
             
-            <?php  } ?>
+            <?php                
+        } ?>
 
         </table>
         <?php    } else{

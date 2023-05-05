@@ -22,16 +22,17 @@ body{
     background-color: rgba(0, 0, 0, 0.51);
     width: 500px;
 } */
-.box{
+.box,
+#personList{
     width: 400px;
     height: 30px;
     margin: 10px 0;
     border: 2px solid rgb(65,88,208);
     border-radius: 5px;
 }
-.box:active,
- .box:focus,
- .box:hover{
+#personList,.box:active,
+ #personList,.box:focus,
+ #personList,.box:hover{
     box-shadow: 0px 0px 3px 3px rgb(65,88,208);
     border-color: green;
 }
@@ -77,3 +78,4 @@ box-shadow: none;
     background-color: #04AA6D;
     color: white;
   }
+
