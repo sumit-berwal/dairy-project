@@ -4,7 +4,7 @@ echo"<br>";
 $email= "";
 $pass = "";
 echo $_POST['fname'];
-include_once'../connection.php';
+require_once '../connection.php';
 if(isset($_POST)){
     $firstName = $_POST['fname'];
     $lastName = $_POST['lname'];
@@ -29,6 +29,14 @@ if(isset($_POST)){
     }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         $hasError = true;
         $message .= 'Please! Enter a valid email address';
+    }else if(!empty($email)){
+        $query = "SELECT * FROM d_users WHERE `email` = '$email'";
+        $sql = mysqli_query($con, $query);
+        // print_r($sql);
+        if(mysqli_num_rows($sql)>0){
+            $hasError .= true;
+            $message .= "This email address is already registerd! ";
+        }
     }
     if(empty($pass)){
         $hasError = true;

@@ -20,6 +20,10 @@ if(isset($_POST['submit'])){
         $hasError .= true;
         $message .= "Please, add milk quantity. ";
     }
+    if(empty($purchaseDate)){
+        $hasError .=true;
+        $message .= "Please, fill the purchase date. ";
+    }
     if(!$hasError){
         $query = "insert into d_milk(personId, morningQty, eveningQty, purchaseDate, enterdBy)
                     value('$personId', '$morningQty', '$eveningQty', '$purchaseDate', '$enterdBy')";

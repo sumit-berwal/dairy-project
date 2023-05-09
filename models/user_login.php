@@ -14,14 +14,14 @@ if(isset($_POST)){
     $hasError = false;
 
     if(empty($email)){
-        $hasError = true;
+        $hasError .= true;
         $message .= "Please! Fill the email address";
     }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $hasError = true;
+        $hasError .= true;
         $message .= "Please! Enter valid email address";
     }
     if(empty($pass)){
-        $hasError = true;
+        $hasError .= true;
         $message .= "Please! Enter your password";
     }
     if(!$hasError){
@@ -44,19 +44,19 @@ if(isset($_POST)){
             unset($row['pass']);
             $_SESSION['users'] = $row;
         }else{
-            $hasError = true;
-            $message = "Your id and password does not match";
+            $hasError .= true;
+            $message .= "Your id and password does not match";
         }
 
         // $_SESSION['message'] = $message;
         // header('location: ../deshboard.php');
     }
     $_SESSION['message'] = $message;
-    if(!$hasError){
+    if($hasError){
         $_SESSION['users'] = $row;
         // echo"<pre>";
         // print_r($row);
-        header('location: ../authentication/user_authentication.php');
+        header('location: ../authentication/user_authentication.php'); 
     }
     if($hasError){
         $_SESSION['submitdata']= $_POST;

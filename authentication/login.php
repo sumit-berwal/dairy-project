@@ -1,11 +1,16 @@
 <?php
 session_start();
-if(!empty($_SESSION['message'])){
-    echo $_SESSION['message'];
-    unset($_SESSION['message']);
-    // print_r($_SESSION['users']);
+function my_alert($message){
+    echo "<script>";
+    echo  "alert('$message')";
+    echo "</script>";
 }
-// echo getcwd();
+if(!empty($_SESSION['message'])){
+    $alert = $_SESSION['message'];
+    my_alert("$alert");
+    unset($_SESSION['message']);
+}
+
 ?>
 
 <!DOCTYPE html>

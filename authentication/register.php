@@ -2,9 +2,15 @@
 session_start();
 // echo $_SESSION['message'];
 // unset($_SESSION['message']);
+function my_alert($message){
+    echo "<script>";
+    echo  "alert('$message')";
+    echo "</script>";
+}
 if(!empty($_SESSION['message'])){
-echo  $_SESSION['message'];
-unset($_SESSION['message']);
+    $alert = $_SESSION['message'];
+    my_alert("$alert");
+    unset($_SESSION['message']);
 }
 
 
@@ -18,7 +24,7 @@ unset($_SESSION['message']);
     <title>Registeration Form</title>
     <link rel="stylesheet" type="text/css" href="../assets/register_style.css">
 </head>
-<body>
+<body> 
     <div class="main">
         <div class="content">
             <h1>Registeration Form</h1>

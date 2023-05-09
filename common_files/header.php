@@ -30,7 +30,7 @@
           <a class="nav-link" href="http://localhost:10014/project/modules-dairy-crud/milk_quantity.php">Add Milk Quantity</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Search Person Data</a>
+          <a class="nav-link" href="http://localhost:10014/project/modules-person-crud/show_milk_quantity.php">Search Person Data</a>
         </li>
 
         <!-- <li class="nav-item dropdown">
