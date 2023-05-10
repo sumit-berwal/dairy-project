@@ -33,6 +33,7 @@ if(!empty($_SESSION['message'])){
                 <input class="box" type="submit" value="Submit" name="submit" >
             </form>
             <p>If you not registered,<a href="../authentication/register.php"> do registeration first</a> </p>
+            <p>Forget Password,<a href="../models/user_forget_password.php">Click here</a> </p>
         </div>
     </div>
 </body>

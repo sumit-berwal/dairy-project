@@ -8,3 +8,5 @@ two users don't be register for same eamil id
 forgot password
 when we delete any row we want to show conferm message
 search bar in add milk quantity
+
+I add a new feature for foget password by used this link:  https://www.allphptricks.com/forgot-password-recovery-reset-using-php-and-mysql/       but the email send process is pending yet. And one more validation is pending to check the token is not exist already in the table.
