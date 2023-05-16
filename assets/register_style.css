@@ -9,7 +9,7 @@ body{
 }
 .main{
     text-align: center;
-    height: 100vh;
+    height: auto;
     background-color: #8ed1fc;
 }
 .main h1{
@@ -35,6 +35,10 @@ body{
  #personList,.box:hover{
     box-shadow: 0px 0px 3px 3px rgb(65,88,208);
     border-color: green;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+    text-align: left;
+    border-radius: 7px;
 }
 
 .main input[type="submit"]{
@@ -79,3 +83,11 @@ box-shadow: none;
     color: white;
   }
 
+  /* footer */
+ /* footer {
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.677);
+ }
+ footer p{
+    color: white;
+ } */

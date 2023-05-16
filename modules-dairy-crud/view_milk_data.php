@@ -1,25 +1,22 @@
 <?php
 require_once '../authentication/user_authentication.php';
 require_once '../connection.php';
-// require_once '../common_files/functions.php';
 include_once '../common_files/header.php'; ?>
 
 <div class="main">
 <?php    
 $personName = $_GET['fName'];
-print_r($personName);
+// print_r($personName);
 $query = "SELECT * FROM `d_milk` WHERE `enterdby` = {$_SESSION['users']['id']} AND `personId` = '$personName' ";
 if(!empty($_POST['startDate']) & !empty($_POST['endDate'])){
     $startDate = $_POST['startDate'];
     $endDate = $_POST['endDate'];
     $query .= "AND purchaseDate between '$startDate' AND '$endDate' order by purchaseDate";
 }
-
 $sql = mysqli_query($con, $query);
-print_r($sql);
+// print_r($sql);
 $row = mysqli_fetch_all($sql, MYSQLI_ASSOC);
 ?>
-
     <form method="post" action=""> 
         <input class="box" type="date" name="startDate" placeholder="Start date"  ></br>
         <input class="box" type="date" name="endDate" placeholder="End date"  ></br>
@@ -27,9 +24,7 @@ $row = mysqli_fetch_all($sql, MYSQLI_ASSOC);
     </form>
 
         <div class="content">
-            <!-- <h1>Milk Quantity</h1> -->
-            <!-- <p>You can see your all milk data here</P> -->
-            
+         
     <?php
     if(!empty($row)){ ?>
      <table id="customers">
@@ -55,6 +50,15 @@ $row = mysqli_fetch_all($sql, MYSQLI_ASSOC);
             
             <?php                
         } ?>
+             <tr> 
+                <td> <?php echo "sumit" ?></td>
+                <td> <?php echo "sumit" ?> </td>
+                <td> <?php echo "sumit" ?> Ltr. </td>
+                <td> <?php echo "sumit" ?> Ltr. </td>
+                <td> <?php echo "sumit" ?> </td>
+                <td> <?php echo "sumit" ?> </td>
+                <td> <?php echo "sumit" ?> </td> 
+            </tr>
 
         </table>
         <?php    } else{
