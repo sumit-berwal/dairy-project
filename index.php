@@ -19,7 +19,7 @@
         ?>
         
 
-<h1>Thare dairy mhara dude!</h1>
+<h1>Our Dairy Your Milk!</h1>
 <a href="authentication/register.php"><button>Register</button></a>
 <a href="authentication/login.php"><button>Login</button></a>
 
