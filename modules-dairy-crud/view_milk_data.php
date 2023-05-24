@@ -1,12 +1,14 @@
 <?php
 require_once '../authentication/user_authentication.php';
 require_once '../connection.php';
-include_once '../common_files/header.php'; ?>
+include_once '../common_files/header.php';
+require_once '../common_files/functions.php';
+ ?>
 
 <div class="main">
 <?php    
 $personName = $_GET['fName'];
-// print_r($personName);
+
 $query = "SELECT * FROM `d_milk` WHERE `enterdby` = {$_SESSION['users']['id']} AND `personId` = '$personName' ";
 if(!empty($_POST['startDate']) & !empty($_POST['endDate'])){
     $startDate = $_POST['startDate'];
@@ -14,8 +16,13 @@ if(!empty($_POST['startDate']) & !empty($_POST['endDate'])){
     $query .= "AND purchaseDate between '$startDate' AND '$endDate' order by purchaseDate";
 }
 $sql = mysqli_query($con, $query);
-// print_r($sql);
+
 $row = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+
+$mdata = array_col($row, 'morningQty');
+$mTotal = array_sum($mdata);
+$edata = array_col($row, 'eveningQty');
+$eTotal = array_sum($edata);
 ?>
     <form method="post" action=""> 
         <input class="box" type="date" name="startDate" placeholder="Start date"  ></br>
@@ -51,13 +58,13 @@ $row = mysqli_fetch_all($sql, MYSQLI_ASSOC);
             <?php                
         } ?>
              <tr> 
-                <td> <?php echo "sumit" ?></td>
-                <td> <?php echo "sumit" ?> </td>
-                <td> <?php echo "sumit" ?> Ltr. </td>
-                <td> <?php echo "sumit" ?> Ltr. </td>
-                <td> <?php echo "sumit" ?> </td>
-                <td> <?php echo "sumit" ?> </td>
-                <td> <?php echo "sumit" ?> </td> 
+                <td> <?php echo " " ?></td>
+                <td> <?php echo "Total =>" ?> </td>
+                <td> <?php echo $mTotal; ?> Ltr. </td>
+                <td> <?php echo $eTotal; ?> Ltr. </td>
+                <td> <?php echo " " ?> </td>
+                <td> <?php echo " " ?> </td>
+                <td> <?php echo " " ?> </td> 
             </tr>
 
         </table>
