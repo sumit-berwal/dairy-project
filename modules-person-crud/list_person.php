@@ -56,8 +56,8 @@ include_once '../common_files/header.php';
                 <td> <?php echo $value["mobile"]; ?> </td>
                 <td> <?php echo $value["enterdby"]; ?> </td>
                 <td> <?php echo $value["reg_date"]; ?> </td> 
-                <td> <a href="./edit_person.php?Id=<?php echo $value['id']; ?>">Edit</a> </td> 
-                <td> <a href="./delete_person.php?Id=<?php echo $value['id']; ?>">Delete</a> </td> 
+                <td> <a href="./edit_person.php?Id=<?php echo $value['id'];?>">Edit</a> </td> 
+                <td> <a onclick="return myFunction()"  href="./delete_person.php?Id=<?php echo $value['id'];?>">Delete</a> </td> 
             </tr>
             
             <?php                
@@ -67,10 +67,10 @@ include_once '../common_files/header.php';
         <?php    } else{
 echo "<h3>Sorry! Nothing found here</h3>";
         } ?>
-
         </div>
     </div>
 <?php
+
     include_once '../common_files/footer.php';
 ?>
 

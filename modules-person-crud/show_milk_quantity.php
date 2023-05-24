@@ -44,12 +44,21 @@ $row = showmilkData($con);
                 <td> <?php echo $value["reg_date"]; ?> </td> 
                 <td> <a href="../modules-dairy-crud/update_milk_quantity.php?Id=<?php echo $value['id']; ?>">Edit</a> </td> 
                 <td> <a href="../modules-dairy-crud/view_milk_data.php?fName=<?php echo $value["personId"]; ?>">View</a> </td>
-                <td> <a href="../modules-dairy-crud/delete_milk_quantity.php?Id=<?php echo $value['id']; ?>">Delete</a> </td> 
+                <td> <a onclick="return myPopup()" href="../modules-dairy-crud/delete_milk_quantity.php?Id=<?php echo $value['id']; ?>">Delete</a> </td> 
             </tr>
             
             <?php   
             // print_r($value['personId']);             
         } ?>
+            <tr> 
+                <td> <?php echo "sumit" ?></td>
+                <td> <?php echo "Total =" ?> </td>
+                <td> <?php echo "sumit" ?> Ltr. </td>
+                <td> <?php echo "sumit" ?> Ltr. </td>
+                <td> <?php echo "sumit" ?> </td>
+                <td> <?php echo "sumit" ?> </td>
+                <td> <?php echo "sumit" ?> </td> 
+            </tr>
 
         </table>
         <?php    } else{

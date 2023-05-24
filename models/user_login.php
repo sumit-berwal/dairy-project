@@ -4,7 +4,7 @@ session_start();
 include_once '../connection.php';
 $email = "";
 $pass = "";
-if(isset($_POST)){
+if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $pass = $_POST['password'];
     // echo $email;

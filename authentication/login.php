@@ -29,12 +29,14 @@ if(!empty($_SESSION['message'])){
             <p>Fill Your Login Details!</p>
             <form action="../models/user_login.php" method="post" >
                 <input class="box" type="eamil" name="email" placeholder="Enter your valid email"></br>
-                <input class="box" type="password" name="password" placeholder="Enter your correct passsword" ></br>
+                <input class="box" id="showPassword" type="password" name="password" placeholder="Enter your correct passsword" ></br>
+                <input type="checkbox" id ="showButton" >Show Password</br>
                 <input class="box" type="submit" value="Submit" name="submit" >
             </form>
             <p>If you not registered,<a href="../authentication/register.php"> do registeration first</a> </p>
             <p>Forget Password,<a href="../models/user_forget_password.php">Click here</a> </p>
         </div>
     </div>
+    <script src="../assets/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,269 @@
+*{
+margin: 0px;
+padding:0px;
+box-sizing: border-box;
+}
+body{
+    background-color:#b3e7f4;
+    overflow-x: hidden;
+}
+/* navbar css strat */
+.navbar{
+    display:flex;
+    width: 100%;
+    background-color: black;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 10px;
+    
+
+}
+.navpage ul{
+    display: flex;
+    margin: 10px 20px;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+}
+.navpage li {
+    margin:25px;
+}
+.navpage li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+.logo{
+    height: auto;
+    width: 10vw;
+}
+.menu-img{
+    width: 10px;
+    height: 20px;
+    display: none;
+
+}
+@media only screen and (width:920px) {
+    .menu-img{
+        display: block;
+    }
+    .navpage{
+        display: none;
+    }
+}
+/* navbar css end */
+/* header css strat */
+
+.header{
+    text-align: center;
+    /* color: black; */
+    background-image: url('../images/hero_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+}
+.header-content{
+    padding-top: 30vh;
+    /* color: black; */
+
+}
+.headbtn{
+    background-color: black;
+    color:white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border-style: none;
+    margin-top: 20px;
+    font-size: 18px;
+
+}
+.headbtn:hover{
+    background-color: white;
+    color: black;
+}
+.header-content h5{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+.header-content h2{
+    color: black;
+    font-size: 51px;
+    font-weight: 700;
+    margin: 10px;
+}
+/* header css end */
+/* first section start */
+.contaner{
+    display: flex;
+    padding-top: 50px;
+    padding-bottom:50px;
+}
+.images{
+    width: 50%;
+    /* border: 2px solid black; */
+    padding: 10px;
+    padding-top: 50px;
+}
+.rectangel1{
+    margin-left:50px;
+    width:450px;
+    height: auto;
+}
+.rectangel2{
+    margin-top: -180px;
+    margin-left:150px;
+    width:500px;
+    height: auto;
+}
+
+.text{
+    width: 50%;
+    /* border: 2px solid black; */
+}
+.housetext{
+    padding: 100px;
+}
+.housetext h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+    
+    
+}
+.housetext p{
+    font-weight: 700;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+.housetext ul li{
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.housetext ul{
+    margin-left: 20px;
+
+}
+.btnnum{
+    display: flex;
+    justify-content: baseline;
+    margin-top: 30px;
+}
+.btnnum button{
+    padding: 10px 20px;
+    background-color: blueviolet;
+    color: white;
+    margin-right: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.btnnum p{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+/* first section end */
+/* Second section start */
+.second{
+    display: flex;
+}
+.haf{
+    width: 50%;
+    /* border: 2px solid black; */
+    background-image: url('images/Rectangle 13.png');
+    padding: 20px;
+    
+}
+.haf h3{
+    margin-top: 100px;
+    margin-left: 20px;
+    font-size: 30px;
+    
+}
+.haf h2{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    font-size: 40px;
+}
+.services{
+    display: flex;
+    
+}
+.one{
+    margin: 20px;
+    text-align: center;
+}
+.one img{
+    margin: 10px;
+}
+.one p{
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.car{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.393);
+}
+.carpet{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.393);
+
+}
+.sofa{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.393);
+
+}
+.services2{
+    display: flex;
+}
+.house{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.393);
+}
+.office{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.393);
+}
+.kitchan{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.393);
+}
+
+.secondhaf{
+    width: 50%;
+    /* border: 2px solid black; */
+    text-align: center;
+}
+.secondhaf img{
+    border-radius: 0px 50px 0px 50px;
+    
+}
+/* secont section end */
+/* Third section start */
+.thirdsec {
+text-align: center;
+padding-top: 50px;
+padding-bottom: 50px;
+
+}
+.thirdsec h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+.thirdsec h3{
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 10px;
+}

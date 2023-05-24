@@ -12,8 +12,8 @@ include_once '../common_files/header.php'; ?>
             <h1>Add New Person</h1>
             <p>Fill this form carefully</P>
             <form action="../models/create_person_data.php" method="post">
-                <input class="box" type="text" name="fname" placeholder="Your first name" ></br>
-                <input class="box" type="text" name="lname" placeholder="Your last name" ></br>
+                <input class="box" type="text" spellcheck="true" name="fname" placeholder="Your first name" ></br>
+                <input class="box" type="text" spellcheck="true" name="lname" placeholder="Your last name" ></br>
                 <input class="box" type="email" name="email" placeholder="Your email id" ></br>
                 <input class="box" type="number" name="mobile" placeholder="Your mobile number" ></br>
                 <input class="box" type="submit" value="Submit" name="submit">
